@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=La+Belle+Aurore&family=Noto Sans');
+
+body {
+    display: grid;
+    height: 100vh;
+    grid-template-areas:
+        "Self   Identities"
+        "Names    Pronouns"
+        "Words       Words";
+    font-family: 'Tilt Neon', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    margin: 0;
+    grid-template-columns: calc(100vw / 2);
+    background-image: var(--bgImage);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+* {
+    font-family: 'Noto Sans', sans-serif;
+    text-shadow: -1px -1px 0 var(--bg), 1px -1px 0 var(--bg), -1px 1px 0 var(--bg), 1px 1px 0 var(--bg);
+}
+
+.InfoSection {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Name and Self Section */
+#Self {
+    grid-area: Self;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    border-right: 1px solid #fff2;
+}
+#NamePFP {
+    display: flex;
+    align-items: center;
+}
+#PFP {
+    border-radius: 100%;
+    height: 6em;
+}
+#Name {
+    margin-left: 2em;
+}
+
+#Time,
+#Time * {
+    display: inline;
+}
+
+#Offset {
+    mix-blend-mode: soft-light;
+    font-size: 0.75em;
+}
+
+/**/
+#Identities {
+    grid-area: Identities;
+    display: flex;
+    align-content: flex-start;
+    justify-content: flex-end;
+}
+#IDList {
+    display: inline-block;
+    max-width: 26em;
+    padding: 0;
+}
+.Identity {
+    display: inline-block;
+    height: fit-content;
+    padding: 0;
+    margin: 0;
+}
+
+.Identity a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+.Identity * > img {
+    height: 1em;
+    width: 1.5em;
+    margin-left: 1em;
+    display: inline-block;
+    border-radius: 5px;
+}
+.Identity > {
+    display: inline;
+    height: fit-content;
+    margin-left: 0.2em;
+}
+
+/**/
+
+#Names {
+    grid-area: Names;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    border-right: 1px solid #fff2;
+    padding-right: 1em;
+}
+#NameList {
+    margin: 0;
+}
+
+.OtherList {
+    list-style: none;
+}
+
+.Y {
+    color: #ffb7f3;
+}
+.J {
+    color: #fffd7e;
+}
+.C {
+    color: #ff9494;
+}
+.O {
+    color: #fff;
+}
+.N {
+    color: #575757;
+}
+
+#Pronouns {
+    grid-area: Pronouns;
+    margin-left: 1em;
+}
+#PronounsList {
+    padding: 0;
+    margin: 0;
+}
+
+#Words {
+    grid-area: Words;
+    display: grid;
+    text-align: center;
+    grid-template-areas:
+        "Heading    Heading     Heading     Heading"
+        "Honorifics Person Compliments Relationship"
+        "Honorifics Person Compliments Relationship";
+}
+#WordsTitle {
+    grid-area: Heading;
+    height: fit-content;
+}
+#Honorifics {
+    grid-area: Honorifics;
+    width: 25vw;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+#Person {
+    grid-area: Person;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 25vw;
+}
+#Compliments {
+    grid-area: Compliments;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    width: 25vw;
+}
+#Relationship {
+    grid-area: Relationship;
+    text-align: center;
+    width: 25vw;
+    padding: 0;
+    margin: 0;
+}
+
+@media (pointer:none), (pointer:coarse)  {
+    body {
+        display: grid;
+        height: 100vh;
+        grid-template-areas: "Self Self" "Identities Identities" "Names      Pronouns  " "Words Words";
+        font-family: "Tilt Neon";
+        background-color: var(--bg);
+        color: var(--text);
+        margin: 0;
+        grid-template-columns: calc(100vw / 2);
+    }
+    #Self {
+        grid-area: Self;
+        padding: 1em;
+        display: flex;
+        justify-content: initial;
+        align-items: initial;
+        border-right: 0
+    }
+    #Identities {
+        align-content: center;
+        justify-content: center;
+        text-align: center;
+    }
+    #Names {
+        grid-area: Names;
+        display: flex;
+        flex-direction: column;
+         text-align: left;
+        border-right: 1px solid #fff2;
+        padding-right: 1em;
+        margin: 0 0 0 1em;
+        padding: 0;
+    }
+    #NameList {
+        margin: 0;
+        padding: 0;
+    }
+    #Words {
+        grid-area: Words;
+        display: grid;
+        text-align: center;
+        grid-template-areas:    "Heading     Heading     " "Honorifics  Person      ""Compliments Relationship";
+        text-align: center;
+        align-content: center;
+        justify-content: space-around;
+        width: 100vw;
+    }
+    #Words > * {
+        padding-bottom: 1em;
+    }
+}
+
+:root {
+    --bg: #2a292e;
+    --text: #fff;
+    --bgImage: "";
+}
+
+#NewStyle {
+    display: none;
+}
+#OldStyle {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    width: fit-content;
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+}
+#GoHome {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--text);
+    width: fit-content;
+    backdrop-filter: blur(5px);
+    border-radius: 1em;
+    position: absolute;
+    bottom: 0;
+    padding: 1em;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Edit Landon's Data</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="Pages">
+            <label for="OtherSettings"><input type="radio" name="Viewing" class="OtherSettings" id="OtherSettings" value="OtherSettings" onchange="ChangePage()"/><p>Other Settings</p></label>
+            <label for="Password"><input type="radio" name="Viewing" class="Password" id="Password" value="Password" checked/><p>Password</p></label>
+            <label for="Delete"><input type="radio" name="Viewing" class="Delete" id="Delete" value="Delete" onchange="window.location = '/Edit/Delete'"/><p>Delete</p></label>
+        </div>
+
+        <form id="change-password" action="/ChangePassword">
+            <div id="Background">
+                <h2>Change Password</h2>
+                <label for="OldPassword">Old Password</label>
+                <br>
+                <input type="Password" name="OldPassword" id="OldPassword" placeholder="OldPassword">
+                <br><br>
+                <label for="NewPassword">New Password</label>
+                <br>
+                <input type="Password" name="NewPassword" id="NewPassword" placeholder="NewPassword">
+            </div>
+            <input type="Submit" value="Update">
+        </form>
+
+    <script src="https://kit.fontawesome.com/c6b06c2030.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    </body>
+</html>

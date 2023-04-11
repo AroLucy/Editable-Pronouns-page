@@ -1,0 +1,438 @@
+
+i {
+  background: linear-gradient(145deg, #343434, #2c2c2c);
+  box-shadow:  9px 9px 18px #1e1e1e,
+               -9px -9px 18px #444444;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 100%;
+    color: rgb(132, 132, 132);
+    margin-inline: 5px;
+  }
+
+input + label i {
+	cursor: pointer;
+}
+input[class="Y"]:hover + label i {
+    color: white;
+    background: #ffb7f3;
+box-shadow: inset 3px 3px 6px #d99ccf,
+            inset -3px -3px 6px #ffd2ff;
+}
+input[class="Y"]:checked + label i,
+input[class="Y"]:focus + label i {
+	background: #ffb7f3;
+    color: white;
+}
+input[class="J"]:hover + label i {
+    color: white;
+    background: #fffd7e;
+box-shadow: inset 3px 3px 6px #d9d76b,
+            inset -3px -3px 6px #ffff91;
+}
+input[class="J"]:checked + label i,
+input[class="J"]:focus + label i {
+    color: white;
+	background: #fffd7e;
+}
+input[class="C"]:hover + label i {
+    color: white;
+    background: #ff9494;
+  box-shadow: inset 3px 3px 6px #d97e7e,
+              inset -3px -3px 6px #ffaaaa;
+}
+input[class="C"]:checked + label i,
+input[class="C"]:focus + label i {
+    color: white;
+	background: #ff9494;
+}
+input[class="O"]:hover + label i {
+    color: white;
+    background: #96ffa4;
+  box-shadow: inset 3px 3px 6px #80d98b,
+              inset -3px -3px 6px #adffbd;
+}
+input[class="O"]:checked + label i,
+input[class="O"]:focus + label i {
+    color: white;
+	background: #96ffa4;
+}
+input[class="N"]:hover + label i {
+    color: white;
+    background: #575757;
+  box-shadow: inset 3px 3px 6px #4a4a4a,
+              inset -3px -3px 6px #646464;
+}
+input[class="N"]:checked + label i,
+input[class="N"]:focus + label i {
+    color: white;
+	background: #575757;
+}
+.Options {
+    display: inline
+}
+
+input:hover + p, input:checked + p, input:focus + p {
+	color: #fff;
+	background: linear-gradient(145deg, #bbbbff, #9e9edf);
+	box-shadow: 7px 7px 14px #7777a9, -7px -7px 14px #e7e7ff;
+}
+
+input {
+    width: 5em;
+}
+
+input + p {
+	display: inline;
+	padding: 5px;
+	margin: 5px;
+	border-radius: 1em;
+}
+
+
+#edit-form {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+  }
+#Background {
+    border-radius: 1em;
+    text-align: center;
+    max-height: 60vh;
+    overflow-y: auto;
+    padding: 1em;
+    margin-block-end: 1em;
+    background: #313131;
+    box-shadow: inset 7px 7px 14px #1e1e1e, inset -7px -7px 14px #444444;
+    min-width: 25vw;
+}
+
+
+  
+* {
+  font-family: sans-serif;
+  color: white;
+}
+  
+  body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    overflow: hidden;
+    background: #313131;
+  }
+  
+  label {
+    align-self: baseline;
+  }
+  
+  .Viewing {
+    display: flex;
+    flex-direction: column;
+    min-width: 50vw;
+  }
+  
+  .Viewing > input {
+    margin-bottom: 1em
+  }
+
+  #Pages {
+    width: fit-content;
+    position: absolute;
+    top: 9px;
+    border-radius: 1em;
+    padding: 1em;
+    background: #313131;
+    box-shadow: inset 7px 7px 14px #1e1e1e, inset -7px -7px 14px #444444;
+}
+
+input:not([type="file"],[type="radio"]) {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 7px;
+  border-radius: 1em;
+  margin-top: 1em;
+  background: none;
+  box-shadow: inset 2px 5px 10px rgb(30, 30, 30);
+  color: #fff;
+}
+button[type="submit"] {
+  bottom: 242px;
+  appearance: none;
+  border: none;
+  padding: 0.5em;
+  border-radius: 1em;
+  background: #afa;
+  background: linear-gradient(145deg, #343434, #2c2c2c);
+  box-shadow: 7px 7px 14px #1e1e1e, -7px -7px 14px #444444;
+}
+
+  #MobileHamburger {
+    display: none;
+  }
+
+  
+  .remove-array, .remove-identity {
+    appearance: none;
+    border: none;
+    padding: 0.5em;
+    border-radius: 1em;
+    background: linear-gradient(145deg, #343434, #2c2c2c);
+    box-shadow: 7px 7px 14px #1e1e1e, -7px -7px 14px #444444;
+  }
+  
+  button:not(button[type="submit"], .remove-identity, .remove-array) {
+    appearance: none;
+    border: none;
+    padding: 0.5em;
+    border-radius: 1em;
+    margin-top: 1em;
+    background: linear-gradient(145deg, #343434, #2c2c2c);
+    box-shadow: 7px 7px 14px #1e1e1e, -7px -7px 14px #444444;
+  }
+  
+  button:hover {
+    background: #313131;
+    box-shadow: inset 7px 7px 14px #1e1e1e, inset -7px -7px 14px #444444;
+  }
+  #MobileMenu, #MenuBlur {
+    display: none;
+  }
+
+  @media only screen and (max-width: 575px) {
+    #MobileHamburger i {
+      display: block !important;
+      background: none;
+      box-shadow: none;
+    }
+    #MobileHamburger {
+      display: block;
+      width: 4em;
+    }
+    #Pages label, #Pages input {
+        display: none !important;
+    }
+    #Pages {
+        background: none;
+        box-shadow: none;
+    }
+   
+#MenuBlur {
+    display: none;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+  }
+  
+  #MobileMenu {
+    display: none;
+    position: absolute;
+    background: #f0f0f0;
+  }
+  
+  #MobileMenu label {
+    display: flex;
+    margin: 1em;
+    height: 2em;
+  }
+  
+  
+  #MobileMenu p {
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #MobileMenu {
+    width: 50vw;
+    padding-bottom: 3em !important;
+    overflow: hidden;
+  }
+  .Options label {
+    margin: 0;
+  }
+  .Options {
+    display: inline-block;
+}
+.Options > label {
+    height: fit-content;
+    display: inline-block;
+    margin-inline: 0px;
+  }
+  i {
+    padding: 6px;
+  }
+  
+#MobileMenu input {
+    appearance: none;
+    width: 0;
+    height: 0;
+  }
+  #MobileMenu > input:checked + label > p, #MobileMenu > input:hover + label > p, #MobileMenu > input:focus + label > p {
+    /* box-shadow: 7px 7px 14px #7777a9, -7px -7px 14px #e7e7ff; */
+    /* background: linear-gradient(145deg, #bbbbff, #9e9edf); */
+    background: #313131;
+    box-shadow: inset 10px 10px 20px #1e1e1e, inset -10px -10px 20px #444444;
+  }
+    
+  #MobileMenu > input + label > p {
+    /* padding: 30px; */
+    background: #313131;
+  }
+  #MobileMenu, #MobileMenu {
+    background: linear-gradient(145deg, #343434, #2c2c2c);
+    box-shadow: 10px 10px 20px #1e1e1e, -10px -10px 20px #444444;
+    border-radius: 1em;
+    z-index: 1;
+  }
+  #MobileMenu * > p {
+    background: linear-gradient(145deg, #343434, #2c2c2c);
+    box-shadow: 10px 10px 20px #1e1e1e, -10px -10px 20px #444444;
+    z-index: 1;
+    border-radius: 1em;
+    padding: 25px
+  }
+  
+      
+  }
+
+  
+
+
+  .Options input[type="radio"] {
+    appearance: none;
+    width: 0;
+  }
+  
+  #Pages *:not(#MobileHamburger) {
+    display: inline;
+    padding-block: 8px;
+  }
+  #Pages input {
+    width: 0;
+    appearance: none;
+  }
+  #Pages > input:checked + label > p,
+  #Pages > input:focus + label > p {
+    color: #fff;
+    box-shadow: 7px 7px 14px #1e1e1e, -7px -7px 14px #444444;
+  }
+
+  #Pages >input:hover + label > p {
+    color: #fff;
+    background: #313131;
+box-shadow: inset 9px 9px 18px #1e1e1e,
+            inset -9px -9px 18px #444444;
+  }
+  
+  #Pages > input + label > p {
+    padding: 5px;
+    border-radius: 1em
+  }
+
+  #Background > div:not(.Viewing) {
+    display: none;
+  }
+  #Background > div {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  input[type="date"] {
+    width: initial;
+  }
+  input[type="color"] {
+    width: 10em;
+  }
+  input[type="color"]::-moz-color-swatch, input[type="color"]::-webkit-color-swatch {
+    appearance: none;
+    border: none;
+    position: relative;
+    top: -7px;
+    left: -7px;
+    height: 32px;
+    width: 134px;
+    border-radius: 1em;
+    background: linear-gradient(145deg, #2224, #0004);
+  color: #fff;
+box-shadow:  10px 10px 20px #1e1e1e,
+             -10px -10px 20px #444444;
+  }
+  input[type="color"]::-webkit-color-swatch {
+    -webkit-appearance: none;
+    border: none;
+    position: relative;
+    top: -10px;
+    left: -px;
+    height: 26px;
+    border-radius: 1em;
+    box-shadow: inset 5px 5px 15px #0004, inset -5px -5px 15px #fff4;
+}
+input[type="color"] {
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+input[type="file"] {
+  display: none;
+}
+input[type="file"] +label {
+  box-shadow: 7px 7px 14px #1e1e1e, -7px -7px 14px #444444;
+  display: inline;
+  padding: 7px;
+  border-radius: 1em;
+  margin: 5px;
+  /*! margin-inline: 37%; */
+  font-size: 10pt;
+}
+
+input[type="file"] + label:hover{
+  background: none;
+  box-shadow: inset 2px 5px 10px rgb(30, 30, 30);
+  
+}
+
+#PFPPicker {
+  margin-bottom: 1em;
+}
+
+#myDropdown {
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	border: none;
+	padding: 7px;
+	border-radius: 1em;
+	margin-top: 1em;
+	background: none;
+	box-shadow: inset 2px 5px 10px rgb(30, 30, 30);
+	color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#myDropdown * {
+  display: inherit;
+  background: none;
+	box-shadow: inset 2px 5px 10px rgb(30, 30, 30);
+	color: #fff;
+  border-radius: 1em;
+  margin-block: 0.5em;
+  padding: 1em;
+}
+
+.dropdown-content {
+  display: none !important;
+}
+.dropdown-content.show {
+  display: flex !important;
+}

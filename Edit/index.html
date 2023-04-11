@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" >
+        <title>Edit Data</title>
+        <meta name="viewport" content="width=device-width">
+        <link href="./style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div id="Pages">
+            <button id="MobileHamburger" ><i class="fa-solid fa-bars"></i></button>
+                <input type="radio" name="Viewing" id="SelfD" value="Self" onclick="ChangePage('Self')" checked selected/>            <label for="SelfD">
+                <p>Self</p>
+            </label>
+                <input type="radio" name="Viewing" id="StylingD" value="Styling" onclick="ChangePage('Style')"/>            <label for="StylingD">
+                <p>Styling</p>
+            </label>
+                <input type="radio" name="Viewing" id="IdentitiesD" value="Identities" onclick="ChangePage('Identities')"/>            <label for="IdentitiesD">
+                <p>Identities</p>
+            </label>
+                <input type="radio" name="Viewing" id="NamesD" value="Names" onclick="ChangePage('Names')"/>            <label for="NamesD">
+                <p>Names</p>
+            </label>
+                <input type="radio" name="Viewing" id="PronounsD" value="Pronouns" onclick="ChangePage('Pronouns')"/>            <label for="PronounsD">
+                <p>Pronouns</p>
+            </label>
+                <input type="radio" name="Viewing" id="WordsD" value="Words" onclick="ChangePage('Words')"/>            <label for="WordsD">
+                <p>Words</p>
+            </label>
+                <input type="radio" name="Viewing" id="PasswordD" value="Password" onclick="ChangePagePassword()"/>            <label for="PasswordD">
+                <p>Password</p>
+            </label>
+            </label>
+                <input type="radio" name="Viewing" id="DeleteD" value="Delete" onclick="window.location = '/Edit/Delete'"/>            <label for="DeleteD">
+                <p>Delete Account</p>
+            </label>
+        </div>
+        <div id="MenuBlur"></div>
+        <div id="MobileMenu">
+                <input type="radio" name="Viewing" id="SelfM" value="Self" onclick="ChangePage('Self')" checked/>            <label for="SelfM">
+                <p>Self</p>
+            </label>
+                <input type="radio" name="Viewing" id="StylingM" value="Styling" onclick="ChangePage('Style')"/>            <label for="StylingM">
+                <p>Styling</p>
+            </label>
+                <input type="radio" name="Viewing" id="IdentitiesM" value="Identities" onclick="ChangePage('Identities')"/>            <label for="IdentitiesM">
+                <p>Identities</p>
+            </label>
+                <input type="radio" name="Viewing" id="NamesM" value="Names" onclick="ChangePage('Names')"/>            <label for="NamesM">
+                <p>Names</p>
+            </label>
+                <input type="radio" name="Viewing" id="PronounsM" value="Pronouns" onclick="ChangePage('Pronouns')"/>            <label for="PronounsM">
+                <p>Pronouns</p>
+            </label>
+                <input type="radio" name="Viewing" id="WordsM" value="Words" onclick="ChangePage('Words')"/>            <label for="WordsM">
+                <p>Words</p>
+            </label>
+                <input type="radio" name="Viewing" id="PasswordM" value="Password" onclick="ChangePagePassword()"/>            <label for="PasswordM">
+                <p>Password</p>
+            </label>
+            </label>
+                <input type="radio" name="Viewing" id="DeleteM" value="Delete" onclick="window.location = '/Edit/Delete'"/>            <label for="DeleteM">
+                <p>Delete Account</p>
+            </label>
+        </div>
+
+        <form id="edit-form" action="/SaveData">
+            <input id="AuthCode" name="AuthCode" hidden >
+           <div id="Background">
+            <div id="Self" class="Viewing" >
+                <h2>Personal Information</h2>
+                <div><label for="name">Name</label></div>
+                <input type="text" id="name" name="name">
+                <br>
+                <div><label for="birthday">Birthday</label></div>
+                <input type="date" id="birthday" name="birthday">
+                <br>
+                <div style="margin-bottom: 1em;"><label for="profile-pic" >Profile Picture</label></div>
+                <div id="PFPPicker"><input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+                <label for="profile-pic">Choose File</label>
+                </div>
+                <div class="dropdown">
+                    <button id="DropdownBtn" class="dropbtn">Timezone</button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"><a href="#Africa/Abidjan" style="">Africa/Abidjan</a><a href="#Africa/Accra" style="">Africa/Accra</a><a href="#Africa/Algiers" style="">Africa/Algiers</a><a href="#Africa/Bissau" style="">Africa/Bissau</a><a href="#Africa/Cairo" style="">Africa/Cairo</a><a href="#Africa/Casablanca" style="">Africa/Casablanca</a><a href="#Africa/Ceuta" style="">Africa/Ceuta</a><a href="#Africa/El_Aaiun" style="">Africa/El_Aaiun</a><a href="#Africa/Johannesburg" style="">Africa/Johannesburg</a><a href="#Africa/Juba" style="">Africa/Juba</a><a href="#Africa/Khartoum" style="">Africa/Khartoum</a><a href="#Africa/Lagos" style="">Africa/Lagos</a><a href="#Africa/Maputo" style="">Africa/Maputo</a><a href="#Africa/Monrovia" style="">Africa/Monrovia</a><a href="#Africa/Nairobi" style="">Africa/Nairobi</a><a href="#Africa/Ndjamena" style="">Africa/Ndjamena</a><a href="#Africa/Sao_Tome" style="">Africa/Sao_Tome</a><a href="#Africa/Tripoli" style="">Africa/Tripoli</a><a href="#Africa/Tunis" style="">Africa/Tunis</a><a href="#Africa/Windhoek" style="">Africa/Windhoek</a><a href="#America/Adak" style="">America/Adak</a><a href="#America/Anchorage" style="">America/Anchorage</a><a href="#America/Araguaina" style="">America/Araguaina</a><a href="#America/Argentina/Buenos_Aires" style="">America/Argentina/Buenos_Aires</a><a href="#America/Argentina/Catamarca" style="">America/Argentina/Catamarca</a><a href="#America/Argentina/Cordoba" style="">America/Argentina/Cordoba</a><a href="#America/Argentina/Jujuy" style="">America/Argentina/Jujuy</a><a href="#America/Argentina/La_Rioja" style="">America/Argentina/La_Rioja</a><a href="#America/Argentina/Mendoza" style="">America/Argentina/Mendoza</a><a href="#America/Argentina/Rio_Gallegos" style="">America/Argentina/Rio_Gallegos</a><a href="#America/Argentina/Salta" style="">America/Argentina/Salta</a><a href="#America/Argentina/San_Juan" style="">America/Argentina/San_Juan</a><a href="#America/Argentina/San_Luis" style="">America/Argentina/San_Luis</a><a href="#America/Argentina/Tucuman" style="">America/Argentina/Tucuman</a><a href="#America/Argentina/Ushuaia" style="">America/Argentina/Ushuaia</a><a href="#America/Asuncion" style="">America/Asuncion</a><a href="#America/Atikokan" style="">America/Atikokan</a><a href="#America/Bahia" style="">America/Bahia</a><a href="#America/Bahia_Banderas" style="">America/Bahia_Banderas</a><a href="#America/Barbados" style="">America/Barbados</a><a href="#America/Belem" style="">America/Belem</a><a href="#America/Belize" style="">America/Belize</a><a href="#America/Blanc-Sablon" style="">America/Blanc-Sablon</a><a href="#America/Boa_Vista" style="">America/Boa_Vista</a><a href="#America/Bogota" style="">America/Bogota</a><a href="#America/Boise" style="">America/Boise</a><a href="#America/Cambridge_Bay" style="">America/Cambridge_Bay</a><a href="#America/Campo_Grande" style="">America/Campo_Grande</a><a href="#America/Cancun" style="">America/Cancun</a><a href="#America/Caracas" style="">America/Caracas</a><a href="#America/Cayenne" style="">America/Cayenne</a><a href="#America/Chicago" style="">America/Chicago</a><a href="#America/Chihuahua" style="">America/Chihuahua</a><a href="#America/Costa_Rica" style="">America/Costa_Rica</a><a href="#America/Creston" style="">America/Creston</a><a href="#America/Cuiaba" style="">America/Cuiaba</a><a href="#America/Curacao" style="">America/Curacao</a><a href="#America/Danmarkshavn" style="">America/Danmarkshavn</a><a href="#America/Dawson" style="">America/Dawson</a><a href="#America/Dawson_Creek" style="">America/Dawson_Creek</a><a href="#America/Denver" style="">America/Denver</a><a href="#America/Detroit" style="">America/Detroit</a><a href="#America/Edmonton" style="">America/Edmonton</a><a href="#America/Eirunepe" style="">America/Eirunepe</a><a href="#America/El_Salvador" style="">America/El_Salvador</a><a href="#America/Fort_Nelson" style="">America/Fort_Nelson</a><a href="#America/Fortaleza" style="">America/Fortaleza</a><a href="#America/Glace_Bay" style="">America/Glace_Bay</a><a href="#America/Goose_Bay" style="">America/Goose_Bay</a><a href="#America/Grand_Turk" style="">America/Grand_Turk</a><a href="#America/Guatemala" style="">America/Guatemala</a><a href="#America/Guayaquil" style="">America/Guayaquil</a><a href="#America/Guyana" style="">America/Guyana</a><a href="#America/Halifax" style="">America/Halifax</a><a href="#America/Havana" style="">America/Havana</a><a href="#America/Hermosillo" style="">America/Hermosillo</a><a href="#America/Indiana/Indianapolis" style="">America/Indiana/Indianapolis</a><a href="#America/Indiana/Knox" style="">America/Indiana/Knox</a><a href="#America/Indiana/Marengo" style="">America/Indiana/Marengo</a><a href="#America/Indiana/Petersburg" style="">America/Indiana/Petersburg</a><a href="#America/Indiana/Tell_City" style="">America/Indiana/Tell_City</a><a href="#America/Indiana/Vevay" style="">America/Indiana/Vevay</a><a href="#America/Indiana/Vincennes" style="">America/Indiana/Vincennes</a><a href="#America/Indiana/Winamac" style="">America/Indiana/Winamac</a><a href="#America/Inuvik" style="">America/Inuvik</a><a href="#America/Iqaluit" style="">America/Iqaluit</a><a href="#America/Jamaica" style="">America/Jamaica</a><a href="#America/Juneau" style="">America/Juneau</a><a href="#America/Kentucky/Louisville" style="">America/Kentucky/Louisville</a><a href="#America/Kentucky/Monticello" style="">America/Kentucky/Monticello</a><a href="#America/La_Paz" style="">America/La_Paz</a><a href="#America/Lima" style="">America/Lima</a><a href="#America/Los_Angeles" style="">America/Los_Angeles</a><a href="#America/Maceio" style="">America/Maceio</a><a href="#America/Managua" style="">America/Managua</a><a href="#America/Manaus" style="">America/Manaus</a><a href="#America/Martinique" style="">America/Martinique</a><a href="#America/Matamoros" style="">America/Matamoros</a><a href="#America/Mazatlan" style="">America/Mazatlan</a><a href="#America/Menominee" style="">America/Menominee</a><a href="#America/Merida" style="">America/Merida</a><a href="#America/Metlakatla" style="">America/Metlakatla</a><a href="#America/Mexico_City" style="">America/Mexico_City</a><a href="#America/Miquelon" style="">America/Miquelon</a><a href="#America/Moncton" style="">America/Moncton</a><a href="#America/Monterrey" style="">America/Monterrey</a><a href="#America/Montevideo" style="">America/Montevideo</a><a href="#America/Nassau" style="">America/Nassau</a><a href="#America/New_York" style="">America/New_York</a><a href="#America/Nipigon" style="">America/Nipigon</a><a href="#America/Nome" style="">America/Nome</a><a href="#America/Noronha" style="">America/Noronha</a><a href="#America/North_Dakota/Beulah" style="">America/North_Dakota/Beulah</a><a href="#America/North_Dakota/Center" style="">America/North_Dakota/Center</a><a href="#America/North_Dakota/New_Salem" style="">America/North_Dakota/New_Salem</a><a href="#America/Nuuk" style="">America/Nuuk</a><a href="#America/Ojinaga" style="">America/Ojinaga</a><a href="#America/Panama" style="">America/Panama</a><a href="#America/Pangnirtung" style="">America/Pangnirtung</a><a href="#America/Paramaribo" style="">America/Paramaribo</a><a href="#America/Phoenix" style="">America/Phoenix</a><a href="#America/Port-au-Prince" style="">America/Port-au-Prince</a><a href="#America/Port_of_Spain" style="">America/Port_of_Spain</a><a href="#America/Porto_Velho" style="">America/Porto_Velho</a><a href="#America/Puerto_Rico" style="">America/Puerto_Rico</a><a href="#America/Punta_Arenas" style="">America/Punta_Arenas</a><a href="#America/Rainy_River" style="">America/Rainy_River</a><a href="#America/Rankin_Inlet" style="">America/Rankin_Inlet</a><a href="#America/Recife" style="">America/Recife</a><a href="#America/Regina" style="">America/Regina</a><a href="#America/Resolute" style="">America/Resolute</a><a href="#America/Rio_Branco" style="">America/Rio_Branco</a><a href="#America/Santarem" style="">America/Santarem</a><a href="#America/Santiago" style="">America/Santiago</a><a href="#America/Santo_Domingo" style="">America/Santo_Domingo</a><a href="#America/Sao_Paulo" style="">America/Sao_Paulo</a><a href="#America/Scoresbysund" style="">America/Scoresbysund</a><a href="#America/Sitka" style="">America/Sitka</a><a href="#America/St_Johns" style="">America/St_Johns</a><a href="#America/Swift_Current" style="">America/Swift_Current</a><a href="#America/Tegucigalpa" style="">America/Tegucigalpa</a><a href="#America/Thule" style="">America/Thule</a><a href="#America/Thunder_Bay" style="">America/Thunder_Bay</a><a href="#America/Tijuana" style="">America/Tijuana</a><a href="#America/Toronto" style="">America/Toronto</a><a href="#America/Vancouver" style="">America/Vancouver</a><a href="#America/Whitehorse" style="">America/Whitehorse</a><a href="#America/Winnipeg" style="">America/Winnipeg</a><a href="#America/Yakutat" style="">America/Yakutat</a><a href="#America/Yellowknife" style="">America/Yellowknife</a><a href="#Antarctica/Casey" style="">Antarctica/Casey</a><a href="#Antarctica/Davis" style="">Antarctica/Davis</a><a href="#Antarctica/DumontDUrville" style="">Antarctica/DumontDUrville</a><a href="#Antarctica/Macquarie" style="">Antarctica/Macquarie</a><a href="#Antarctica/Mawson" style="">Antarctica/Mawson</a><a href="#Antarctica/Palmer" style="">Antarctica/Palmer</a><a href="#Antarctica/Rothera" style="">Antarctica/Rothera</a><a href="#Antarctica/Syowa" style="">Antarctica/Syowa</a><a href="#Antarctica/Troll" style="">Antarctica/Troll</a><a href="#Antarctica/Vostok" style="">Antarctica/Vostok</a><a href="#Asia/Almaty" style="">Asia/Almaty</a><a href="#Asia/Amman" style="">Asia/Amman</a><a href="#Asia/Anadyr" style="">Asia/Anadyr</a><a href="#Asia/Aqtau" style="">Asia/Aqtau</a><a href="#Asia/Aqtobe" style="">Asia/Aqtobe</a><a href="#Asia/Ashgabat" style="">Asia/Ashgabat</a><a href="#Asia/Atyrau" style="">Asia/Atyrau</a><a href="#Asia/Baghdad" style="">Asia/Baghdad</a><a href="#Asia/Baku" style="">Asia/Baku</a><a href="#Asia/Bangkok" style="">Asia/Bangkok</a><a href="#Asia/Barnaul" style="">Asia/Barnaul</a><a href="#Asia/Beirut" style="">Asia/Beirut</a><a href="#Asia/Bishkek" style="">Asia/Bishkek</a><a href="#Asia/Brunei" style="">Asia/Brunei</a><a href="#Asia/Chita" style="">Asia/Chita</a><a href="#Asia/Choibalsan" style="">Asia/Choibalsan</a><a href="#Asia/Colombo" style="">Asia/Colombo</a><a href="#Asia/Damascus" style="">Asia/Damascus</a><a href="#Asia/Dhaka" style="">Asia/Dhaka</a><a href="#Asia/Dili" style="">Asia/Dili</a><a href="#Asia/Dubai" style="">Asia/Dubai</a><a href="#Asia/Dushanbe" style="">Asia/Dushanbe</a><a href="#Asia/Famagusta" style="">Asia/Famagusta</a><a href="#Asia/Gaza" style="">Asia/Gaza</a><a href="#Asia/Hebron" style="">Asia/Hebron</a><a href="#Asia/Ho_Chi_Minh" style="">Asia/Ho_Chi_Minh</a><a href="#Asia/Hong_Kong" style="">Asia/Hong_Kong</a><a href="#Asia/Hovd" style="">Asia/Hovd</a><a href="#Asia/Irkutsk" style="">Asia/Irkutsk</a><a href="#Asia/Jakarta" style="">Asia/Jakarta</a><a href="#Asia/Jayapura" style="">Asia/Jayapura</a><a href="#Asia/Jerusalem" style="">Asia/Jerusalem</a><a href="#Asia/Kabul" style="">Asia/Kabul</a><a href="#Asia/Kamchatka" style="">Asia/Kamchatka</a><a href="#Asia/Karachi" style="">Asia/Karachi</a><a href="#Asia/Kathmandu" style="">Asia/Kathmandu</a><a href="#Asia/Khandyga" style="">Asia/Khandyga</a><a href="#Asia/Kolkata" style="">Asia/Kolkata</a><a href="#Asia/Krasnoyarsk" style="">Asia/Krasnoyarsk</a><a href="#Asia/Kuala_Lumpur" style="">Asia/Kuala_Lumpur</a><a href="#Asia/Kuching" style="">Asia/Kuching</a><a href="#Asia/Macau" style="">Asia/Macau</a><a href="#Asia/Magadan" style="">Asia/Magadan</a><a href="#Asia/Makassar" style="">Asia/Makassar</a><a href="#Asia/Manila" style="">Asia/Manila</a><a href="#Asia/Nicosia" style="">Asia/Nicosia</a><a href="#Asia/Novokuznetsk" style="">Asia/Novokuznetsk</a><a href="#Asia/Novosibirsk" style="">Asia/Novosibirsk</a><a href="#Asia/Omsk" style="">Asia/Omsk</a><a href="#Asia/Oral" style="">Asia/Oral</a><a href="#Asia/Pontianak" style="">Asia/Pontianak</a><a href="#Asia/Pyongyang" style="">Asia/Pyongyang</a><a href="#Asia/Qatar" style="">Asia/Qatar</a><a href="#Asia/Qostanay" style="">Asia/Qostanay</a><a href="#Asia/Qyzylorda" style="">Asia/Qyzylorda</a><a href="#Asia/Riyadh" style="">Asia/Riyadh</a><a href="#Asia/Sakhalin" style="">Asia/Sakhalin</a><a href="#Asia/Samarkand" style="">Asia/Samarkand</a><a href="#Asia/Seoul" style="">Asia/Seoul</a><a href="#Asia/Shanghai" style="">Asia/Shanghai</a><a href="#Asia/Singapore" style="">Asia/Singapore</a><a href="#Asia/Srednekolymsk" style="">Asia/Srednekolymsk</a><a href="#Asia/Taipei" style="">Asia/Taipei</a><a href="#Asia/Tashkent" style="">Asia/Tashkent</a><a href="#Asia/Tbilisi" style="">Asia/Tbilisi</a><a href="#Asia/Tehran" style="">Asia/Tehran</a><a href="#Asia/Thimphu" style="">Asia/Thimphu</a><a href="#Asia/Tokyo" style="">Asia/Tokyo</a><a href="#Asia/Tomsk" style="">Asia/Tomsk</a><a href="#Asia/Ulaanbaatar" style="">Asia/Ulaanbaatar</a><a href="#Asia/Urumqi" style="">Asia/Urumqi</a><a href="#Asia/Ust-Nera" style="">Asia/Ust-Nera</a><a href="#Asia/Vladivostok" style="">Asia/Vladivostok</a><a href="#Asia/Yakutsk" style="">Asia/Yakutsk</a><a href="#Asia/Yangon" style="">Asia/Yangon</a><a href="#Asia/Yekaterinburg" style="">Asia/Yekaterinburg</a><a href="#Asia/Yerevan" style="">Asia/Yerevan</a><a href="#Atlantic/Azores" style="">Atlantic/Azores</a><a href="#Atlantic/Bermuda" style="">Atlantic/Bermuda</a><a href="#Atlantic/Canary" style="">Atlantic/Canary</a><a href="#Atlantic/Cape_Verde" style="">Atlantic/Cape_Verde</a><a href="#Atlantic/Faroe" style="">Atlantic/Faroe</a><a href="#Atlantic/Madeira" style="">Atlantic/Madeira</a><a href="#Atlantic/Reykjavik" style="">Atlantic/Reykjavik</a><a href="#Atlantic/South_Georgia" style="">Atlantic/South_Georgia</a><a href="#Atlantic/Stanley" style="">Atlantic/Stanley</a><a href="#Australia/Adelaide" style="">Australia/Adelaide</a><a href="#Australia/Brisbane" style="">Australia/Brisbane</a><a href="#Australia/Broken_Hill" style="">Australia/Broken_Hill</a><a href="#Australia/Darwin" style="">Australia/Darwin</a><a href="#Australia/Eucla" style="">Australia/Eucla</a><a href="#Australia/Hobart" style="">Australia/Hobart</a><a href="#Australia/Lindeman" style="">Australia/Lindeman</a><a href="#Australia/Lord_Howe" style="">Australia/Lord_Howe</a><a href="#Australia/Melbourne" style="">Australia/Melbourne</a><a href="#Australia/Perth" style="">Australia/Perth</a><a href="#Australia/Sydney" style="">Australia/Sydney</a><a href="#CET" style="">CET</a><a href="#CST6CDT" style="">CST6CDT</a><a href="#EET" style="">EET</a><a href="#EST" style="">EST</a><a href="#EST5EDT" style="">EST5EDT</a><a href="#Etc/GMT" style="">Etc/GMT</a><a href="#Etc/GMT+1" style="">Etc/GMT+1</a><a href="#Etc/GMT+10" style="">Etc/GMT+10</a><a href="#Etc/GMT+11" style="">Etc/GMT+11</a><a href="#Etc/GMT+12" style="">Etc/GMT+12</a><a href="#Etc/GMT+2" style="">Etc/GMT+2</a><a href="#Etc/GMT+3" style="">Etc/GMT+3</a><a href="#Etc/GMT+4" style="">Etc/GMT+4</a><a href="#Etc/GMT+5" style="">Etc/GMT+5</a><a href="#Etc/GMT+6" style="">Etc/GMT+6</a><a href="#Etc/GMT+7" style="">Etc/GMT+7</a><a href="#Etc/GMT+8" style="">Etc/GMT+8</a><a href="#Etc/GMT+9" style="">Etc/GMT+9</a><a href="#Etc/GMT-1" style="">Etc/GMT-1</a><a href="#Etc/GMT-10" style="">Etc/GMT-10</a><a href="#Etc/GMT-11" style="">Etc/GMT-11</a><a href="#Etc/GMT-12" style="">Etc/GMT-12</a><a href="#Etc/GMT-13" style="">Etc/GMT-13</a><a href="#Etc/GMT-14" style="">Etc/GMT-14</a><a href="#Etc/GMT-2" style="">Etc/GMT-2</a><a href="#Etc/GMT-3" style="">Etc/GMT-3</a><a href="#Etc/GMT-4" style="">Etc/GMT-4</a><a href="#Etc/GMT-5" style="">Etc/GMT-5</a><a href="#Etc/GMT-6" style="">Etc/GMT-6</a><a href="#Etc/GMT-7" style="">Etc/GMT-7</a><a href="#Etc/GMT-8" style="">Etc/GMT-8</a><a href="#Etc/GMT-9" style="">Etc/GMT-9</a><a href="#Etc/UTC" style="">Etc/UTC</a><a href="#Europe/Amsterdam" style="">Europe/Amsterdam</a><a href="#Europe/Andorra" style="">Europe/Andorra</a><a href="#Europe/Astrakhan" style="">Europe/Astrakhan</a><a href="#Europe/Athens" style="">Europe/Athens</a><a href="#Europe/Belgrade" style="">Europe/Belgrade</a><a href="#Europe/Berlin" style="">Europe/Berlin</a><a href="#Europe/Brussels" style="">Europe/Brussels</a><a href="#Europe/Bucharest" style="">Europe/Bucharest</a><a href="#Europe/Budapest" style="">Europe/Budapest</a><a href="#Europe/Chisinau" style="">Europe/Chisinau</a><a href="#Europe/Copenhagen" style="">Europe/Copenhagen</a><a href="#Europe/Dublin" style="">Europe/Dublin</a><a href="#Europe/Gibraltar" style="">Europe/Gibraltar</a><a href="#Europe/Helsinki" style="">Europe/Helsinki</a><a href="#Europe/Istanbul" style="">Europe/Istanbul</a><a href="#Europe/Kaliningrad" style="">Europe/Kaliningrad</a><a href="#Europe/Kiev" style="">Europe/Kiev</a><a href="#Europe/Kirov" style="">Europe/Kirov</a><a href="#Europe/Lisbon" style="">Europe/Lisbon</a><a href="#Europe/London" style="">Europe/London</a><a href="#Europe/Luxembourg" style="">Europe/Luxembourg</a><a href="#Europe/Madrid" style="">Europe/Madrid</a><a href="#Europe/Malta" style="">Europe/Malta</a><a href="#Europe/Minsk" style="">Europe/Minsk</a><a href="#Europe/Monaco" style="">Europe/Monaco</a><a href="#Europe/Moscow" style="">Europe/Moscow</a><a href="#Europe/Oslo" style="">Europe/Oslo</a><a href="#Europe/Paris" style="">Europe/Paris</a><a href="#Europe/Prague" style="">Europe/Prague</a><a href="#Europe/Riga" style="">Europe/Riga</a><a href="#Europe/Rome" style="">Europe/Rome</a><a href="#Europe/Samara" style="">Europe/Samara</a><a href="#Europe/Saratov" style="">Europe/Saratov</a><a href="#Europe/Simferopol" style="">Europe/Simferopol</a><a href="#Europe/Sofia" style="">Europe/Sofia</a><a href="#Europe/Stockholm" style="">Europe/Stockholm</a><a href="#Europe/Tallinn" style="">Europe/Tallinn</a><a href="#Europe/Tirane" style="">Europe/Tirane</a><a href="#Europe/Ulyanovsk" style="">Europe/Ulyanovsk</a><a href="#Europe/Uzhgorod" style="">Europe/Uzhgorod</a><a href="#Europe/Vienna" style="">Europe/Vienna</a><a href="#Europe/Vilnius" style="">Europe/Vilnius</a><a href="#Europe/Volgograd" style="">Europe/Volgograd</a><a href="#Europe/Warsaw" style="">Europe/Warsaw</a><a href="#Europe/Zaporozhye" style="">Europe/Zaporozhye</a><a href="#Europe/Zurich" style="">Europe/Zurich</a><a href="#HST" style="">HST</a><a href="#Indian/Chagos" style="">Indian/Chagos</a><a href="#Indian/Christmas" style="">Indian/Christmas</a><a href="#Indian/Cocos" style="">Indian/Cocos</a><a href="#Indian/Kerguelen" style="">Indian/Kerguelen</a><a href="#Indian/Mahe" style="">Indian/Mahe</a><a href="#Indian/Maldives" style="">Indian/Maldives</a><a href="#Indian/Mauritius" style="">Indian/Mauritius</a><a href="#Indian/Reunion" style="">Indian/Reunion</a><a href="#MET" style="">MET</a><a href="#MST" style="">MST</a><a href="#MST7MDT" style="">MST7MDT</a><a href="#PST8PDT" style="">PST8PDT</a><a href="#Pacific/Apia" style="">Pacific/Apia</a><a href="#Pacific/Auckland" style="">Pacific/Auckland</a><a href="#Pacific/Bougainville" style="">Pacific/Bougainville</a><a href="#Pacific/Chatham" style="">Pacific/Chatham</a><a href="#Pacific/Chuuk" style="">Pacific/Chuuk</a><a href="#Pacific/Easter" style="">Pacific/Easter</a><a href="#Pacific/Efate" style="">Pacific/Efate</a><a href="#Pacific/Enderbury" style="">Pacific/Enderbury</a><a href="#Pacific/Fakaofo" style="">Pacific/Fakaofo</a><a href="#Pacific/Fiji" style="">Pacific/Fiji</a><a href="#Pacific/Funafuti" style="">Pacific/Funafuti</a><a href="#Pacific/Galapagos" style="">Pacific/Galapagos</a><a href="#Pacific/Gambier" style="">Pacific/Gambier</a><a href="#Pacific/Guadalcanal" style="">Pacific/Guadalcanal</a><a href="#Pacific/Guam" style="">Pacific/Guam</a><a href="#Pacific/Honolulu" style="">Pacific/Honolulu</a><a href="#Pacific/Kiritimati" style="">Pacific/Kiritimati</a><a href="#Pacific/Kosrae" style="">Pacific/Kosrae</a><a href="#Pacific/Kwajalein" style="">Pacific/Kwajalein</a><a href="#Pacific/Majuro" style="">Pacific/Majuro</a><a href="#Pacific/Marquesas" style="">Pacific/Marquesas</a><a href="#Pacific/Nauru" style="">Pacific/Nauru</a><a href="#Pacific/Niue" style="">Pacific/Niue</a><a href="#Pacific/Norfolk" style="">Pacific/Norfolk</a><a href="#Pacific/Noumea" style="">Pacific/Noumea</a><a href="#Pacific/Pago_Pago" style="">Pacific/Pago_Pago</a><a href="#Pacific/Palau" style="">Pacific/Palau</a><a href="#Pacific/Pitcairn" style="">Pacific/Pitcairn</a><a href="#Pacific/Pohnpei" style="">Pacific/Pohnpei</a><a href="#Pacific/Port_Moresby" style="">Pacific/Port_Moresby</a><a href="#Pacific/Rarotonga" style="">Pacific/Rarotonga</a><a href="#Pacific/Tahiti" style="">Pacific/Tahiti</a><a href="#Pacific/Tarawa" style="">Pacific/Tarawa</a><a href="#Pacific/Tongatapu" style="">Pacific/Tongatapu</a><a href="#Pacific/Wake" style="">Pacific/Wake</a><a href="#Pacific/Wallis" style="">Pacific/Wallis</a><a href="#WET" style="">WET</a></div>
+                </div>
+            </div>
+            
+            <div id="Style" >
+                <h2>Style</h2>
+                <div><label for="BGColor">Background Color</label></div>
+                <input type="color" name="BGColor" id="BGColor">
+                <br>
+                <div><label for="TextColor">Text Color</label></div>
+                <input type="color" name="TextColor" id="TextColor">
+                <br style="margin-bottom: 1em;">
+                <div><label for="BackgroundImage">Background Image</label></div>
+                <div style="margin-bottom: 1em; display: inline;"><input type="file" onchange="{
+                    console.log('Changed');
+                    const file = this.files[0];
+                    const formData = new FormData();
+                    formData.append('image', file);
+            
+                    fetch('/imageUpload', {
+                        method: 'POST',
+                        headers: {
+                            Auth: sessionStorage.getItem('Auth'),
+                        },
+                        body: formData,
+                    })
+                        .then((response) => response.json())
+                        .then((data) => console.log(data))
+                        .catch((error) => console.error(error));
+                }" name="BackgroundImage" id="BackgroundImage" accept="image/*">
+                <label for="BackgroundImage">Choose File</label>
+                <input type="button" class="remove-array" onclick="a = new File([''],'__Remove'); b =  new DataTransfer(); b.items.add(a) ;document.querySelectorAll('input#BackgroundImage')[0].files = b.files" value="Remove">
+            </div>
+            </div>
+
+            <div id="Identities" >
+                <h2>Identities</h2>
+                <div id="identities-container"></div>
+                <button id="add-identity" type="button" onclick="addIdentity()">Add</button>
+            </div>
+
+            <div id="Names" >
+                <h2>Names</h2>
+                <div id="names-container"></div>
+                <button type="button" onclick="addNames()">Add</button>
+            </div>
+            
+            <div id="Pronouns" >
+                <h2>Pronouns</h2>
+                <div id="pronouns-container"></div>
+                <button type="button" onclick="addPronouns()">Add</button>
+            </div>
+            
+            <div id="Words" >
+                <h2>Honorifics</h2>
+                <div id="honorifics-container"></div>
+                <button type="button" onclick="addHonorifics()">Add</button>
+            
+                <h2>Person</h2>
+                <div id="person-container"></div>
+                <button type="button" onclick="addPerson()">Add</button>
+            
+                <h2>Compliments</h2>
+                <div id="compliments-container"></div>
+                <button type="button" onclick="addCompliments()">Add</button>
+
+                <h2>Relationship</h2>
+                <div id="relationship-container"></div>
+                <button type="button" onclick="addRelationship()">Add</button>
+            </div>
+            </div>
+            
+
+            <button type="submit">Save Changes</button>
+        </form>
+        
+    <script src="https://kit.fontawesome.com/c6b06c2030.js" crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
+    </body>
+</html>
