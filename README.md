@@ -5,5 +5,5 @@ an Editable Pronouns page for many users
 git clone https://github.com/AroLucy/Editable-Pronouns-page
 cd Editable-Pronouns-page
 npm i
-npm run
+npm run run
 ```
